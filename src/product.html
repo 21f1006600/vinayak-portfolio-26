@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Projects | Vinayak</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <style>
+      .subpage-hero {
+        padding: 7rem 2rem 2rem;
+        text-align: center;
+      }
+
+      .subpage-hero .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        transition: gap 0.2s ease;
+      }
+
+      .subpage-hero .back-link:hover { gap: 0.7rem; }
+
+      .subpage-hero .page-badge {
+        display: inline-block;
+        background: rgba(255, 205, 66, 0.15);
+        border: 1px solid rgba(255, 205, 66, 0.4);
+        color: var(--primary-color);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.3rem 1rem;
+        border-radius: 30px;
+        margin-bottom: 1rem;
+      }
+
+      .subpage-hero h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 0.6rem;
+      }
+
+      .subpage-hero p {
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.7;
+        font-size: 0.95rem;
+      }
+
+      .division {
+        width: 100%;
+        height: 2px;
+        background-color: var(--card-background);
+        margin: 2.5rem 0;
+      }
+
+      .projects-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2rem 5rem;
+      }
+
+      .project {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(250px, auto);
+        gap: 0.9rem;
+      }
+
+      .card {
+        padding: 1rem;
+        background: var(--card-background);
+        color: #ffffff;
+        border-radius: 5px;
+        transition: 0.4s ease-in-out;
+        cursor: pointer;
+        min-height: 250px;
+        position: relative;
+      }
+
+      .card a {
+        color: #ffffff;
+        transition: 0.25s ease-in-out;
+        font-size: 1.1rem;
+        margin-right: 0.3rem;
+      }
+
+      .card a:hover { color: var(--primary-color); }
+
+      .card:hover { box-shadow: inset 0 100px 1000px 10px rgba(0,0,0,0.8); }
+      .card:hover .project-info { opacity: 1; }
+
+      .project-info {
+        display: flex;
+        justify-content: space-between;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+
+      .project-bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        top: 160px;
+        left: 10px;
+      }
+
+      .card .project-bio h3 { font-size: 0.9rem; }
+      .card .project-bio p  { font-size: 0.83rem; }
+
+      /* Card backgrounds — Product */
+      .card:nth-child(1) { background: url(assets/project/gpay.png) center center/contain no-repeat; }
+.card:nth-child(2) { background: url(assets/project/carrental.png) center center/contain no-repeat; }
+.card:nth-child(3) { background: url(assets/project/zipcar.png) center center/contain no-repeat; }
+.card:nth-child(4) { background: url(assets/project/project-one.png) center center/contain no-repeat; }
+.card:nth-child(5) { background: url(assets/project/project-six.png) center center/contain no-repeat; }
+.card:nth-child(6) { background: url(assets/project/project-three.png) center center/contain no-repeat; }
+      @media (max-width: 1000px) {
+        .project { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .project { grid-template-columns: 1fr; }
+        .subpage-hero h1 { font-size: 2rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <h1 id="logo">
+          <a href="index.html"><img src="./assets/logo.png" alt="Your Logo" /></a>
+        </h1>
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="index.html#projects">PROJECTS</a></li>
+          <li><a class="nav-link" href="#">CONTACT</a></li>
+          <li><a class="nav-link" href="#">SKILLS</a></li>
+          <li>
+            <a class="nav-link btn btn-primary" href="https://drive.google.com/file/d/1v2b8w1My5OHIIux0dEoKw4GGt62S--Hm/view?usp=drive_link">RESUME <i class="fas fa-arrow-right"></i></a>
+          </li>
+          <div class="theme-switch">
+            <input type="checkbox" id="switch" />
+            <label class="toggle-icons" for="switch">
+              <img class="moon" src="assets/moon.svg" />
+              <img class="sun" src="assets/sun.svg" />
+            </label>
+          </div>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sub-page hero -->
+    <div class="subpage-hero">
+      <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <div class="page-badge">🚀 Product</div>
+      <h1>Product Projects</h1>
+      <p>Product Teardowns, Case Studies, MVP Design & Product Strategy</p>
+      <div class="division"></div>
+    </div>
+
+    <!-- Project grid -->
+    <div class="projects-page">
+      <article class="project">
+
+        <!-- Project 1 -->
+        <div class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Google Pay Teardown</h3>
+              <p>Product Management, User Research, Root Cause Analysis, Strategy</p>
+            </div>
+            <div class="project-link">
+              <a href="" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://drive.google.com/file/d/1Cgl57i-pyrmauM4beM4AbHGcbypJZO52/view?usp=drive_link" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Zipcar Case Study</h3>
+              <p>P2P Vehicle Sharing, Product Strategy, UX Research</p>
+            </div>
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Three</h3>
+              <p>MVP Design, Roadmap, Go-to-Market</p>
+            </div>
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Four</h3>
+              <p>Competitive Analysis, Pricing Strategy</p>
+            </div>
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Five</h3>
+              <p>OKRs, Metrics, Product Analytics</p>
+            </div>
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Six</h3>
+              <p>User Personas, Journey Maps, PRD</p>
+            </div>
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+
+    <footer id="footer">
+      <div class="container">
+        <a href="">Connect with Me</a>
+        <div class="social">
+          <a href="https://x.com/prodguy23" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a>
+          <a href="https://www.linkedin.com/in/vinayak-kumar-48378753/" target="_blank"><img src="./assets/linkedin-icon.svg" alt="Linkedin" /></a>
+          <a href="https://github.com/21f1006600/Vinayakkk23/blob/main/README.md" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+          <a href="mailto:kumar.vinayak1988@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
