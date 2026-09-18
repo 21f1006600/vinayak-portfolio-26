@@ -147,9 +147,25 @@ Index · HTML
             <li><a class="nav-link" href="#projects">PROJECTS</a></li>
             <li><a class="nav-link" href="contact.html">CONTACT</a></li>
             <li><a class="nav-link" href="#">SKILLS</a></li>
-            <li>
-              <a class="nav-link btn btn-primary" href="https://drive.google.com/file/d/1HlnPNHKYazZ_f0o1T3zkeRF6W6leFP2_/view?usp=sharing">RESUME <i class="fas fa-arrow-right"></i></a>
-            </li>
+            <li class="resume-dropdown">
+  <button type="button" class="nav-link btn btn-primary resume-toggle">RESUME <i class="fas fa-chevron-down"></i></button>
+  <div class="resume-menu">
+    <a href="https://drive.google.com/file/d/1u-yZ5fbTObzd6HHn9T_9BDs_6vLMnVgk/view?usp=sharing" target="_blank" class="resume-option">
+      <i class="fas fa-robot"></i>
+      <div>
+        <span class="resume-option-title">AI/ML Resume</span>
+        <span class="resume-option-desc">Data Science, ML & AI projects</span>
+      </div>
+    </a>
+    <a href="https://drive.google.com/file/d/1XhKe7J_xw5oCemUgOq0a_yoH4-M70cf0/view?usp=sharing" target="_blank" class="resume-option">
+      <i class="fas fa-rocket"></i>
+      <div>
+        <span class="resume-option-title">Product Resume</span>
+        <span class="resume-option-desc">Product Management & Strategy</span>
+      </div>
+    </a>
+  </div>
+</li>
             
           </ul>
           <div class="hamburger">
@@ -171,6 +187,32 @@ Index · HTML
         <a href="contact.html" class="btn btn-secondary">Connect With Me</a>
       </section>
     </header>
+
+    <!-- Experience -->
+<section id="experience" class="container">
+  <div class="division"></div>
+  <div class="content-text">
+    <h2>Experience</h2>
+    <p>Where I've applied AI to real-world problems.</p>
+  </div>
+
+  <div class="experience-container">
+    <div class="experience-item">
+      <div class="experience-logo"><i class="fas fa-robot"></i></div>
+      <div class="experience-details">
+        <div class="experience-role">AI Generalist (Freelance)</div>
+        <div class="experience-company">Handshake AI</div>
+        <div class="experience-meta">July 2026 - Present &middot; Remote, USA</div>
+        <ul class="experience-bullets">
+          <li>Built evaluation benchmarks for LLM coding agents (Claude, DeepSeek) by designing realistic machine 
+            learning pipeline failures across feature engineering, model inference, and data drift scenarios.</li>
+          <li>Developed Docker-based CI/CD evaluation workflows with automated verification, reward scoring, and
+            reproducible testing to validate LLM outputs consistently across evaluation runs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
  
     <!-- Projects -->
     <section id="projects" class="project-container container">

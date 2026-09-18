@@ -186,3 +186,107 @@ h2::selection {
 .social i:hover {
   color: #ffcd42;
 }
+
+/* ── Resume Dropdown ── */
+.resume-dropdown {
+  position: relative;
+}
+
+.resume-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.resume-toggle .fa-chevron-down {
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+}
+
+.resume-dropdown.open .resume-toggle .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.resume-menu {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  right: 0;
+  min-width: 260px;
+  background: var(--card-background, #1c1c1c);
+  border: 1px solid rgba(255, 205, 66, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  padding: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  z-index: 1000;
+}
+
+.resume-dropdown.open .resume-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.resume-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-color, #fff);
+  transition: background 0.2s ease;
+}
+
+.resume-option:hover {
+  background: rgba(255, 205, 66, 0.1);
+}
+
+.resume-option i {
+  font-size: 1rem;
+  color: var(--primary-color, #ffcd42);
+  margin-top: 0.2rem;
+  width: 18px;
+  text-align: center;
+}
+
+.resume-option-title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-color, #fff);
+}
+
+.resume-option-desc {
+  display: block;
+  font-size: 0.72rem;
+  opacity: 0.65;
+  margin-top: 0.15rem;
+  color: var(--text-color, #fff);
+}
+
+@media (max-width: 768px) {
+  .resume-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0.3rem 0 0;
+    display: none;
+  }
+  .resume-dropdown.open .resume-menu {
+    display: block;
+  }
+  .resume-option {
+    padding: 0.6rem 1rem;
+  }
+}

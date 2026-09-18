@@ -122,7 +122,7 @@
       .card:nth-child(1) { background: url(assets/project/gpay.png) center center/contain no-repeat; }
 .card:nth-child(2) { background: url(assets/project/carrental.png) center center/contain no-repeat; }
 .card:nth-child(3) { background: url(assets/project/lifeskill.png) center center/contain no-repeat; }
-.card:nth-child(4) { background: url(assets/project/.png) center center/contain no-repeat; }
+.card:nth-child(4) { background: url(assets/project/orrin.png) center center/contain no-repeat; }
 .card:nth-child(5) { background: url(assets/project/.png) center center/contain no-repeat; }
 .card:nth-child(6) { background: url(assets/project/.png) center center/contain no-repeat; }
       @media (max-width: 1000px) {
@@ -145,9 +145,25 @@
           <li><a class="nav-link" href="index.html#projects">PROJECTS</a></li>
           <li><a class="nav-link" href="#">CONTACT</a></li>
           <li><a class="nav-link" href="#">SKILLS</a></li>
-          <li>
-            <a class="nav-link btn btn-primary" href="https://drive.google.com/file/d/1HlnPNHKYazZ_f0o1T3zkeRF6W6leFP2_/view?usp=sharing">RESUME <i class="fas fa-arrow-right"></i></a>
-          </li>
+          <li class="resume-dropdown">
+  <button type="button" class="nav-link btn btn-primary resume-toggle">RESUME <i class="fas fa-chevron-down"></i></button>
+  <div class="resume-menu">
+    <a href="https://drive.google.com/file/d/1u-yZ5fbTObzd6HHn9T_9BDs_6vLMnVgk/view?usp=sharing" target="_blank" class="resume-option">
+      <i class="fas fa-robot"></i>
+      <div>
+        <span class="resume-option-title">AI/ML Resume</span>
+        <span class="resume-option-desc">Data Science, ML & AI projects</span>
+      </div>
+    </a>
+    <a href="https://drive.google.com/file/d/1XhKe7J_xw5oCemUgOq0a_yoH4-M70cf0/view?usp=sharing" target="_blank" class="resume-option">
+      <i class="fas fa-rocket"></i>
+      <div>
+        <span class="resume-option-title">Product Resume</span>
+        <span class="resume-option-desc">Product Management & Strategy</span>
+      </div>
+    </a>
+  </div>
+</li>
           <div class="theme-switch">
             <input type="checkbox" id="switch" />
             <label class="toggle-icons" for="switch">
@@ -219,19 +235,19 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Four</h3>
-              <p>Competitive Analysis, Pricing Strategy</p>
-            </div>
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
+       <!-- Orrin -->
+<div class="card">
+  <div class="project-info">
+    <div class="project-bio">
+      <h3>Orrin — AI Knowledge Assistant</h3>
+      <p>0-to-1 Product, Reducing Context-Switching, Unblocking Engineering Delays</p>
+    </div>
+    <div class="project-link">
+      <a href="https://github.com/21f1006600/orrin" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://getorrin.xyz" target="_blank"><i class="fas fa-globe"></i></a>
+    </div>
+  </div>
+</div>
 
         <!-- Project 5 -->
         <div class="card">

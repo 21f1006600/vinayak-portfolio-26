@@ -9,7 +9,38 @@ function mobileMenu() {
 }
 
 // Close navbar when link is clicked
-const navLink = document.querySelectorAll(".nav-link");
+const navLink = document.querySelectorAll(".nav-link:not(.resume-toggle)");
+
+// Resume dropdown (AI/ML vs Product)
+const resumeDropdown = document.querySelector(".resume-dropdown");
+
+if (resumeDropdown) {
+  const resumeToggle = resumeDropdown.querySelector(".resume-toggle");
+
+  resumeToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    resumeDropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!resumeDropdown.contains(e.target)) {
+      resumeDropdown.classList.remove("open");
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      resumeDropdown.classList.remove("open");
+    }
+  });
+
+  resumeDropdown.querySelectorAll(".resume-option").forEach((opt) => {
+    opt.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+  });
+}
 
 navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
